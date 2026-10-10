@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tauheed Nafees — Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Tauheed Nafees — Data Analyst & Computer Science (AI & ML) Undergraduate specializing in Python, SQL, Power BI, RFM Segmentation, and Supply Chain Analytics.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050810'/%3E%3Ctext x='32' y='42' font-size='28' font-weight='800' text-anchor='middle' fill='%235eead4' font-family='Arial'%3ETN%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hero portrait: keep the face centered and prevent the original photo
+       from being cropped around the eyes/forehead by object-fit: cover. */
+    .landing-profile-image-wrap {
+      overflow: hidden;
+    }
+    .landing-profile-image.hero-profile-image {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center 18% !important;
+      transform: scale(1.01);
+      transform-origin: center top;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Trailing Mouse Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Interactive Canvas Particles Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- =========================================================
+       1. INTRO LOADING EXPERIENCE & GATE (MATCHING REFERENCE)
+       ========================================================= -->
+ 
+
+  <div class="loading-screen" id="loading-screen">
+    <!-- Header with arcade ping-pong ball game -->
+    <div class="loading-header">
+      <div class="loader-title">TN <span>/ PORTFOLIO</span></div>
+      <div class="loaderGame-container">
+        <div class="loaderGame-in">
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+          <div class="loaderGame-line"></div>
+        </div>
+        <div class="loaderGame-ball"></div>
+      </div>
+    </div>
+
+    <!-- Background Sliding Marquee -->
+    <div class="loading-marquee">
+      TAUHEED NAFEES • DATA ANALYST • RFM SEGMENTATION • POWER BI • PYTHON & SQL • DATA SCIENCE •
+    </div>
+
+    <!-- Central Expanding Gateway Button -->
+    <div class="loading-wrap" id="loading-wrap">
+      <div class="loading-hover"></div>
+      <div class="loading-button">
+        <div class="loading-container">
+          <span>INITIALIZING</span>
+          <span id="loading-percent">0</span>%
+          <div class="loading-box"></div>
+        </div>
+        <div class="loading-welcome">WELCOME</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       3. SITE NAVIGATION HEADER
+       ========================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="nav-brand-logo">TN</div>
+        <div class="nav-brand-text">TAUHEED<span>DATA ANALYST</span></div>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#about" class="hover-link">
+            <span class="hover-in">
+              <div>ABOUT</div>
+              <div class="hover-ghost">ABOUT</div>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#services" class="hover-link">
+            <span class="hover-in">
+              <div>SERVICES</div>
+              <div class="hover-ghost">SERVICES</div>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="hover-link">
+            <span class="hover-in">
+              <div>SKILLS</div>
+              <div class="hover-ghost">SKILLS</div>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#work" class="hover-link">
+            <span class="hover-in">
+              <div>WORK</div>
+              <div class="hover-ghost">WORK</div>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#experience" class="hover-link">
+            <span class="hover-in">
+              <div>EXPERIENCE</div>
+              <div class="hover-ghost">EXPERIENCE</div>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#certifications" class="hover-link">
+            <span class="hover-in">
+              <div>CERTIFICATIONS</div>
+              <div class="hover-ghost">CERTIFICATIONS</div>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="hover-link">
+            <span class="hover-in">
+              <div>CONTACT</div>
+              <div class="hover-ghost">CONTACT</div>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#resume" class="btn-resume open-resume-modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          RESUME
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       4. HERO / LANDING SECTION (MATCHING REFERENCE LAYOUT)
+       ========================================================= -->
+  <section class="landing-section" id="hero">
+    <div class="landing-container">
+      
+      <!-- Left Column: Intro -->
+      <div class="landing-intro">
+        <div class="badge-status">
+          <span class="badge-pulse"></span>
+          OPEN TO WORK • DATA ANALYST
+        </div>
+        <h2>Hello! I'm</h2>
+        <h1>TAUHEED<br><span>NAFEES</span></h1>
+        <div class="landing-intro-role">Aspiring Data Analyst | Python, SQL, Excel & Power BI</div>
+        <div class="landing-socials">
+          <a
+  href="mailto:tauheednafees1@gmail.com"
+  class="social-icon-btn"
+  title="Email"
+  aria-label="Send email">
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    role="img"
+    aria-label="Email">
+
+    <rect x="2" y="4" width="20" height="16" rx="2"/>
+    <path d="m22 7-10 6L2 7"/>
+
+  </svg>
+
+</a>
+          <a href="https://www.linkedin.com/in/tauheed-nafees-ab6b222a9/" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" role="img" aria-label="LinkedIn"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.8"/>
+<path d="M8 10.5V16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="8" cy="7.5" r="1" fill="currentColor"/>
+<path d="M12 16V10.5M12 13.1C12 11.65 12.95 10.5 14.35 10.5C15.95 10.5 17 11.7 17 13.2V16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://github.com/tauheednafees1-cpu" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="GitHub"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+         <a href="https://wa.me/917985262099"
+   class="social-icon-btn"
+   title="WhatsApp"
+   aria-label="Open WhatsApp chat"
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         width="20"
+         height="20"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.8"
+         stroke-linecap="round"
+         stroke-linejoin="round">
+
+        <path d="M20.4 3.6A11.5 11.5 0 0 0 2.9 17.5L2 22l4.6-1.2A11.5 11.5 0 1 0 20.4 3.6Z"/>
+
+        <path d="M8.1 7.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.9 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.1 1.7.1.5-.1 1.6-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5z"/>
+
+    </svg>
+
+</a>
+        </div>
+      </div>
+
+      <!-- Center Column: Profile Avatar with Dual Orbit Tracks -->
+      <div class="landing-profile-container">
+        <div class="profile-ambient-glow"></div>
+        
+        <!-- Inner Orbit Track (Revolving Clockwise) -->
+        <div class="orbit-track orbit-track-1">
+          <div class="orbit-item orbit-item-1" title="Python">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" role="img" aria-label="Python" style="color:#38bdf8"><path d="M12 2C8.6 2 7 3.35 7 5.85V8h5V9H6.2C3.75 9 2 10.55 2 13.35S3.75 18 6.2 18H8v-2.7c0-2.15 1.25-3.3 3.7-3.3H16V9.2c0-1.95-1.35-3.7-4-3.7h-2V4h2c1 0 1.75.4 2.25 1H12z" fill="currentColor" opacity=".95"/>
+  <circle cx="9.5" cy="6.3" r=".9" fill="#060913"/>
+  <path d="M12 22c3.4 0 5-1.35 5-3.85V16h-5v-1h5.8c2.45 0 4.2-1.55 4.2-4.35S20.25 6 17.8 6H16v2.7c0 2.15-1.25 3.3-3.7 3.3H8v2.8c0 1.95 1.35 3.7 4 3.7h2V20h-2c-1 0-1.75-.4-2.25-1H12z" fill="currentColor" opacity=".72"/>
+  <circle cx="14.5" cy="17.7" r=".9" fill="#060913"/></svg>
+          </div>
+          <div class="orbit-item orbit-item-2" title="SQL">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="SQL" style="color:#22d3ee"><ellipse cx="12" cy="5.2" rx="7.5" ry="3.1"/><path d="M4.5 5.2v6.3c0 1.7 3.4 3.1 7.5 3.1s7.5-1.4 7.5-3.1V5.2"/><path d="M4.5 11.5v6.3c0 1.7 3.4 3.1 7.5 3.1 1.3 0 2.5-.15 3.5-.45"/><path d="M16.3 16.1c-1.6 0-2.9 1-2.9 2.2s1.3 2.2 2.9 2.2 2.9-1 2.9-2.2-1.3-2.2-2.9-2.2z"/></svg>
+          </div>
+          <div class="orbit-item orbit-item-3" title="Power BI">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Power BI" style="color:#f59e0b"><path d="M6 5h2.5v14H6zM10.5 8H13v11h-2.5zM15 3h2.5v16H15zM19 12.5h2v6H19z" fill="currentColor" stroke="none"/></svg>
+          </div>
+        </div>
+
+        <!-- Outer Orbit Track (Revolving Counter-Clockwise) -->
+        <div class="orbit-track orbit-track-2">
+          <div class="orbit-item orbit-item-4" title="Tableau">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Tableau" style="color:#ec4899"><path d="M12 2v20M5 5h14M3 12h18M7 19h10M8 8h8M17 16h4M3 16h4M12 5v14"/></svg>
+          </div>
+          <div class="orbit-item orbit-item-5" title="MySQL">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="MySQL" style="color:#a855f7"><path d="M4 16c2.1-5.3 4.6-7.4 7.3-6.2 1.8.8 2.5 2.4 4.1 2.7 1.5.3 2.8-.5 4.6-2.1"/>
+ <path d="M4 16c1.2 2.1 3 3.2 5.4 3.4M15.4 18.8c1.6.3 3-.1 4.6-1.2M18.5 7.2c-1.2-2.3-3.1-3.4-5.8-3.1"/></svg>
+          </div>
+          <div class="orbit-item orbit-item-6" title="Excel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Excel" style="color:#10b981"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M4 13h16M4 17h16M9 3v18M14 3v18"/></svg>
+          </div>
+        </div>
+
+        <!-- Center Portrait Photo -->
+        <div class="landing-profile-image-wrap">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Tauheed Nafees"
+            class="landing-profile-image hero-profile-image"
+            loading="eager"
+            decoding="async"
+            onerror="this.onerror=null; this.src='assets/images/profile.png';"
+          >
+        </div>
+      </div>
+
+      <!-- Right Column: Kinetic Headline & Action CTA -->
+      <div class="landing-info">
+        <div class="kinetic-label">I transform</div>
+        <div class="kinetic-heading">
+          <span class="kinetic-dynamic" id="kinetic-from">RAW BUSINESS DATA</span>
+          <span style="font-size: 20px; font-weight: 400; color: #94a3b8; display: block; margin: 4px 0;">into</span>
+          <span class="kinetic-dynamic" id="kinetic-to">ACTIONABLE INSIGHTS</span>
+        </div>
+        <p class="landing-desc">
+          Computer Science (AI & ML) undergraduate with hands-on experience turning raw business data into actionable insights using Python, SQL, Excel, and Power BI. Built end-to-end projects in RFM customer segmentation and inventory optimization.
+        </p>
+        <div class="landing-actions">
+          <a href="#work" class="btn-primary">
+            Explore My Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn-secondary">Let's Connect</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. ABOUT SECTION
+       ========================================================= -->
+  <section class="about-section" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        
+        <!-- Left: Framed Photo with Glow and Floating Chips -->
+        <div class="about-photo-wrapper">
+          <div class="about-card-frame">
+            <div class="about-photo-glow"></div>
+            <img src="assets/images/profile.jpg" alt="Tauheed Nafees" class="about-photo">
+            
+            <div class="about-chip chip-1">
+              <span style="font-size: 14px;">📍</span> Kanpur, Uttar Pradesh
+            </div>
+            <div class="about-chip chip-2">
+              <span style="font-size: 14px;">🎓</span> B.Tech CSE (AI & ML)
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bio Details -->
+        <div class="about-content">
+          <span class="section-tag">BACKGROUND & PHILOSOPHY</span>
+          <h2>Turning Complex Data into Strategic Decisions</h2>
+          <p>
+            I am a Computer Science undergraduate specializing in <strong>Artificial Intelligence & Machine Learning</strong> at Allenhouse Institute of Technology. My passion lies at the intersection of business strategy and quantitative data analytics.
+          </p>
+          <p>
+            Having completed an AICTE & ICAC-approved Data Analytics internship at <strong>Codec Technologies</strong>, I gained practical exposure to data cleaning, Exploratory Data Analysis (EDA), and business visualization using Python, Power BI, Matplotlib, and Seaborn.
+          </p>
+          <p>
+           Whether uncovering high-value customer clusters through RFM scoring or building data-driven inventory and replenishment models to reduce stockout and overstock risk, my goal is to deliver clear, data-backed recommendations that improve operational efficiency and support better business decisions.
+          </p>
+
+          <!-- Key Metrics Counter -->
+          <div class="about-stats">
+            <div class="stat-box">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Internship Program</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Core Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Data Tools</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. WHAT I DO / CORE SERVICES (MATCHING REFERENCE CARDS)
+       ========================================================= -->
+  <section class="what-section" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">CORE COMPETENCIES</span>
+        <h2 class="section-title">What <span>I Do</span></h2>
+        <p class="section-subtitle">Bridging raw data pipelines, statistical rigor, and executive reporting to drive measurable business outcomes.</p>
+      </div>
+
+      <div class="what-grid">
+        
+        <!-- Card 1 -->
+        <div class="what-card">
+          <div class="what-corner"></div>
+          <span class="what-num">01 // DATA PIPELINE</span>
+          <h3 class="what-title">Exploratory Data Analysis (EDA)</h3>
+          <div class="what-subtitle">Data Cleaning & Statistical Transformation</div>
+          <p class="what-desc">
+            Transforming messy, incomplete, and high-dimensional operational records into pristine datasets using Python (Pandas, NumPy). Handling missing records, identifying outliers, and generating descriptive statistical profiles.
+          </p>
+          <div class="what-tags">
+            <span class="what-tag">Python</span>
+            <span class="what-tag">Pandas</span>
+            <span class="what-tag">NumPy</span>
+            <span class="what-tag">Data Wrangling</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="what-card">
+          <div class="what-corner"></div>
+          <span class="what-num">02 // VISUALIZATION</span>
+          <h3 class="what-title">BI & Executive Dashboards</h3>
+          <div class="what-subtitle">Power BI, Tableau & KPI Architecture</div>
+          <p class="what-desc">
+            Designing interactive, executive-grade dashboards that convey complex multi-channel business health at a glance. Building DAX measures, interactive data models, and drill-down KPI hierarchies.
+          </p>
+          <div class="what-tags">
+            <span class="what-tag">Power BI</span>
+            <span class="what-tag">Tableau</span>
+            <span class="what-tag">DAX Measures</span>
+            <span class="what-tag">MS Excel</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="what-card">
+          <div class="what-corner"></div>
+          <span class="what-num">03 // BEHAVIORAL</span>
+          <h3 class="what-title">Customer RFM Segmentation</h3>
+          <div class="what-subtitle">Recency, Frequency & Monetary Analytics</div>
+          <p class="what-desc">
+            Partitioning customer databases based on transaction frequency, monetary spend, and recency of purchase. Empowering growth teams with precise retention targeting and churn mitigation strategies.
+          </p>
+          <div class="what-tags">
+            <span class="what-tag">RFM Modeling</span>
+            <span class="what-tag">Customer Analytics</span>
+            <span class="what-tag">Matplotlib</span>
+            <span class="what-tag">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="what-card">
+          <div class="what-corner"></div>
+          <span class="what-num">04 // OPERATIONS</span>
+          <h3 class="what-title">Supply Chain & Inventory Optimization</h3>
+         <div class="what-subtitle">Inventory Analysis & Reorder Planning</div>
+          <p class="what-desc">
+            Analyzing demand cycles, lead-time variances, and historical consumption patterns to calculate optimal Reorder Points (ROP) and safety stock levels, preventing costly stockouts and overstocking.
+          </p>
+          <div class="what-tags">
+            <span class="what-tag">Inventory Analysis</span>
+            <span class="what-tag">Demand Trends</span>
+            <span class="what-tag">Excel</span>
+            <span class="what-tag">Optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. TECHNICAL SKILLS MATRIX (FILTERABLE)
+       ========================================================= -->
+  <section class="skills-section" id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">TECH STACK</span>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <p class="section-subtitle">A versatile toolkit across programming languages, data wrangling libraries, visual analytics platforms, and databases.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="programming">Programming</button>
+        <button class="filter-btn" data-filter="analysis">Data Analysis</button>
+        <button class="filter-btn" data-filter="visualization">Visualization</button>
+        <button class="filter-btn" data-filter="database">Databases</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid">
+        
+        <!-- Python -->
+        <div class="skill-card" data-category="programming">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" role="img" aria-label="Python"><path d="M12 2C8.6 2 7 3.35 7 5.85V8h5V9H6.2C3.75 9 2 10.55 2 13.35S3.75 18 6.2 18H8v-2.7c0-2.15 1.25-3.3 3.7-3.3H16V9.2c0-1.95-1.35-3.7-4-3.7h-2V4h2c1 0 1.75.4 2.25 1H12z" fill="currentColor" opacity=".95"/>
+  <circle cx="9.5" cy="6.3" r=".9" fill="#060913"/>
+  <path d="M12 22c3.4 0 5-1.35 5-3.85V16h-5v-1h5.8c2.45 0 4.2-1.55 4.2-4.35S20.25 6 17.8 6H16v2.7c0 2.15-1.25 3.3-3.7 3.3H8v2.8c0 1.95 1.35 3.7 4 3.7h2V20h-2c-1 0-1.75-.4-2.25-1H12z" fill="currentColor" opacity=".72"/>
+  <circle cx="14.5" cy="17.7" r=".9" fill="#060913"/></svg>
+            </div>
+            
+          </div>
+          <div>
+            <div class="skill-name">Python</div>
+            <div class="skill-category">Programming & Analytics</div>
+          </div>
+          
+        </div>
+
+        <!-- SQL -->
+        <div class="skill-card" data-category="programming">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="SQL"><ellipse cx="12" cy="5.2" rx="7.5" ry="3.1"/><path d="M4.5 5.2v6.3c0 1.7 3.4 3.1 7.5 3.1s7.5-1.4 7.5-3.1V5.2"/><path d="M4.5 11.5v6.3c0 1.7 3.4 3.1 7.5 3.1 1.3 0 2.5-.15 3.5-.45"/><path d="M16.3 16.1c-1.6 0-2.9 1-2.9 2.2s1.3 2.2 2.9 2.2 2.9-1 2.9-2.2-1.3-2.2-2.9-2.2z"/></svg>
+            </div>
+          
+          </div>
+          <div>
+            <div class="skill-name">SQL</div>
+            <div class="skill-category">Queries, Joins & Aggregations</div>
+          </div>
+       
+        </div>
+
+        <!-- Pandas -->
+        <div class="skill-card" data-category="analysis">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            
+          </div>
+          <div>
+            <div class="skill-name">Pandas</div>
+            <div class="skill-category">Data Wrangling & Transformation</div>
+          </div>
+    
+        </div>
+
+        <!-- NumPy -->
+        <div class="skill-card" data-category="analysis">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+            </div>
+     
+          </div>
+          <div>
+            <div class="skill-name">NumPy</div>
+            <div class="skill-category">Array & Mathematical Computing</div>
+          </div>
+      
+        </div>
+
+        <!-- MS Excel -->
+        <div class="skill-card" data-category="analysis">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="MS Excel"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M4 13h16M4 17h16M9 3v18M14 3v18"/></svg>
+            </div>
+         
+          </div>
+          <div>
+            <div class="skill-name">MS Excel</div>
+            <div class="skill-category">VLOOKUP, Pivot Tables, Stats</div>
+          </div>
+         
+        </div>
+
+        <!-- Power BI -->
+        <div class="skill-card" data-category="visualization">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Power BI"><path d="M6 5h2.5v14H6zM10.5 8H13v11h-2.5zM15 3h2.5v16H15zM19 12.5h2v6H19z" fill="currentColor" stroke="none"/></svg>
+            </div>
+        
+          </div>
+          <div>
+            <div class="skill-name">Power BI</div>
+            <div class="skill-category">Executive Dashboards & DAX</div>
+          </div>
+         
+        </div>
+
+        <!-- Tableau -->
+        <div class="skill-card" data-category="visualization">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Tableau"><path d="M12 2v20M5 5h14M3 12h18M7 19h10M8 8h8M17 16h4M3 16h4M12 5v14"/></svg>
+            </div>
+
+          </div>
+          <div>
+            <div class="skill-name">Tableau</div>
+            <div class="skill-category">Visual Analytics & Storytelling</div>
+          </div>
+        
+        </div>
+
+        <!-- Matplotlib & Seaborn -->
+        <div class="skill-card" data-category="visualization">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+            </div>
+          
+          </div>
+          <div>
+            <div class="skill-name">Matplotlib & Seaborn</div>
+            <div class="skill-category">Statistical Charting & Heatmaps</div>
+          </div>
+         
+        </div>
+
+        <!-- MySQL -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="MySQL"><path d="M4 16c2.1-5.3 4.6-7.4 7.3-6.2 1.8.8 2.5 2.4 4.1 2.7 1.5.3 2.8-.5 4.6-2.1"/>
+ <path d="M4 16c1.2 2.1 3 3.2 5.4 3.4M15.4 18.8c1.6.3 3-.1 4.6-1.2M18.5 7.2c-1.2-2.3-3.1-3.4-5.8-3.1"/></svg>
+            </div>
+ 
+          </div>
+          <div>
+            <div class="skill-name">MySQL</div>
+            <div class="skill-category">Relational Database Management</div>
+          </div>
+      
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Git"><path d="M12 3l8.5 8.5L12 20 3.5 11.5 12 3z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="14" r="1"/><path d="M10 11l4 2"/></svg>
+            </div>
+  
+          </div>
+          <div>
+            <div class="skill-name">Git & GitHub</div>
+            <div class="skill-category">Version Control & Collaboration</div>
+          </div>
+    
+        </div>
+
+        <!-- Jupyter Notebook / Lab -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Jupyter"><path d="M4 5.5h16M4 18.5h16"/><path d="M7 12h10"/><path d="M9 8v8M15 8v8"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </div>
+           
+          </div>
+          <div>
+            <div class="skill-name">Jupyter Notebook & Lab</div>
+            <div class="skill-category">Interactive Data Workspaces</div>
+          </div>
+         
+        </div>
+
+        <!-- Data Cleaning & EDA -->
+        <div class="skill-card" data-category="analysis">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+        
+          </div>
+          <div>
+            <div class="skill-name">Data Cleaning & EDA</div>
+            <div class="skill-category">Outliers, Imputation & Wrangling</div>
+          </div>
+        
+        </div>
+
+      </div>
+       <!-- =====================================================
+           SOFT SKILLS
+           ===================================================== -->
+
+      <div class="soft-skills-heading">
+        <span class="section-tag">PERSONAL STRENGTHS</span>
+        <h3>Soft Skills</h3>
+        <p>
+          Professional strengths that support effective analysis,
+          collaboration, communication, and decision-making.
+        </p>
+      </div>
+
+      <div class="skills-grid soft-skills-grid">
+
+        <!-- Problem Solving -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M9 12h6"/>
+                <path d="M12 9v6"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Problem Solving</div>
+            <div class="skill-category">Structured & Analytical Thinking</div>
+          </div>
+        </div>
+
+        <!-- Critical Thinking -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.5"/>
+                <path d="M9 13a3.2 3.2 0 1 1 5.2-2.5"/>
+                <path d="M12 8.5v3.5l2.2 1.4"/>
+                <path d="M9.5 18.5h5"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Critical Thinking</div>
+            <div class="skill-category">Reasoning & Decision Making</div>
+          </div>
+        </div>
+
+        <!-- Communication Skills -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 5.5h16v10H9l-5 4v-14z"/>
+                <path d="M8 9h8"/>
+                <path d="M8 12h5"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Communication Skills</div>
+            <div class="skill-category">Clear & Professional Communication</div>
+          </div>
+        </div>
+
+        <!-- Team Collaboration -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="8" r="3"/>
+                <circle cx="16.5" cy="9" r="2.5"/>
+                <path d="M3.5 19c.5-3 2.5-4.5 5.5-4.5S14 16 14.5 19"/>
+                <path d="M14.5 14.5c2.8 0 4.5 1.5 5 4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Team Collaboration</div>
+            <div class="skill-category">Cooperation & Shared Goals</div>
+          </div>
+        </div>
+
+        <!-- Adaptability -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 8a6 6 0 0 1 10.5-3.9L19 6"/>
+                <path d="M19 3v3h-3"/>
+                <path d="M18 16a6 6 0 0 1-10.5 3.9L5 18"/>
+                <path d="M5 21v-3h3"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Adaptability</div>
+            <div class="skill-category">Flexible & Growth-Oriented</div>
+          </div>
+        </div>
+
+        <!-- Presentation Skills -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="13" rx="2"/>
+                <path d="M8 21h8"/>
+                <path d="M12 17v4"/>
+                <path d="m8 12 2.5-2.5L13 12l3-3"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Presentation Skills</div>
+            <div class="skill-category">Data Storytelling & Delivery</div>
+          </div>
+        </div>
+
+        <!-- Optimistic Mindset -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <div class="skill-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.5"/>
+                <path d="M8.5 10h.01"/>
+                <path d="M15.5 10h.01"/>
+                <path d="M8.5 14c1 1.5 2.2 2 3.5 2s2.5-.5 3.5-2"/>
+                <path d="M12 3.5v-2"/>
+                <path d="M4.5 5.5 3 4"/>
+                <path d="M19.5 5.5 21 4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="skill-name">Optimistic Mindset</div>
+            <div class="skill-category">Positive & Solution-Oriented</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. FEATURED PROJECTS CAROUSEL (MATCHING REFERENCE STRUCTURE)
+       ========================================================= -->
+  <section class="work-section" id="work">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">PORTFOLIO SHOWCASE</span>
+        <h2 class="section-title">Featured <span>Work</span></h2>
+        <p class="section-subtitle">Practical data analytics projects focused on customer behavior, business performance, and operational decision-making.</p>
+      </div>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            
+            <!-- Slide 01: Customer Segmentation RFM Analysis -->
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-info">
+                  <div class="carousel-number">
+                    <h3>01</h3>
+                  </div>
+                  <div class="carousel-details">
+                    <h4>Customer Segmentation — RFM Analysis</h4>
+                    <p class="carousel-category">Customer Analytics & Retention Strategy</p>
+                    <ul class="carousel-description">
+                      <li>Performed RFM analysis to segment customers using recency, frequency, and monetary value.</li>
+                      <li>Cleaned and transformed transaction data, calculated RFM scores, and assigned customer segments.</li>
+                      <li>Analyzed segment-level purchasing behavior to identify high-value VIPs, loyalists, and at-risk customer cohorts.</li>
+                      <li>Built an interactive Streamlit dashboard with Customer 360, CLV estimation, and a retention budget planner.</li>
+                    </ul>
+                    <div class="carousel-tools">
+                      <span class="tools-label">Tech Stack</span>
+                      <p class="tools-list">Python, Pandas, NumPy, Streamlit, Plotly, RFM Scoring</p>
+                    </div>
+                    <div class="carousel-actions">
+                      <a href="#" class="carousel-action-link open-case-study" data-project="rfm">
+                        View Case Study
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                      </a>
+                      <a href="https://tauheed-rfm-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="carousel-action-link">
+                        Live Demo
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                      </a>
+                      <a href="https://github.com/tauheednafees1-cpu/Customer-Segmentation-RFM-Analytics" target="_blank" rel="noopener noreferrer" class="carousel-action-link">
+                        Source Code
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                      </a>
+                    </div>
+                    <p class="demo-dataset-note">
+                      Download the demo dataset from Source Code-> <strong>sample_transactions.csv</strong>
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-image-wrapper rfm-project-gallery">
+                  <style>
+                    .rfm-project-gallery{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;}
+                    .rfm-project-gallery .rfm-main-frame{position:relative;width:100%;height:330px;border-radius:14px;overflow:hidden;background:#0b111b;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+                    .rfm-project-gallery .rfm-main-image{width:100%;height:100%;object-fit:contain;display:block;background:#080d15;}
+                    .rfm-project-gallery .rfm-nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(5,10,18,.78);color:#fff;cursor:pointer;z-index:3;display:grid;place-items:center;font-size:22px;line-height:1;}
+                    .rfm-project-gallery .rfm-prev{left:12px}.rfm-project-gallery .rfm-next{right:12px}
+                    .rfm-project-gallery .rfm-count{position:absolute;right:12px;bottom:12px;padding:5px 9px;border-radius:8px;background:rgba(5,10,18,.82);color:#fff;font-size:11px;z-index:3;}
+                    .rfm-project-gallery .rfm-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;}
+                    .rfm-project-gallery .rfm-thumb{height:58px;padding:0;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;background:#0b111b;cursor:pointer;opacity:.65;}
+                    .rfm-project-gallery .rfm-thumb.active{opacity:1;border-color:var(--accentColor,#54e6d2);}
+                    .rfm-project-gallery .rfm-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+                    @media(max-width:900px){.rfm-project-gallery .rfm-main-frame{height:260px}.rfm-project-gallery .rfm-thumb{height:48px}}
+                  </style>
+                  <div class="rfm-main-frame">
+                    <button class="rfm-nav rfm-prev" type="button" aria-label="Previous RFM screenshot">‹</button>
+                    <img class="rfm-main-image" src="assets/images/rfm1.png" alt="Customer Segmentation RFM Analysis dashboard" loading="eager">
+                    <button class="rfm-nav rfm-next" type="button" aria-label="Next RFM screenshot">›</button>
+                    <span class="rfm-count">1 / 4</span>
+                  </div>
+                  <div class="rfm-thumbs">
+                    <button class="rfm-thumb active" type="button" data-rfm="assets/images/rfm1.png"><img src="assets/images/rfm1.png" alt="RFM dashboard 1"></button>
+                    <button class="rfm-thumb" type="button" data-rfm="assets/images/rfm2.png"><img src="assets/images/rfm2.png" alt="RFM dashboard 2"></button>
+                    <button class="rfm-thumb" type="button" data-rfm="assets/images/rfm3.png"><img src="assets/images/rfm3.png" alt="RFM dashboard 3"></button>
+                    <button class="rfm-thumb" type="button" data-rfm="assets/images/rfm4.png"><img src="assets/images/rfm4.png" alt="RFM dashboard 4"></button>
+                  </div>
+                  <script>
+                    (function(){
+                      const gallery=document.currentScript.closest('.rfm-project-gallery');
+                      if(!gallery)return;
+                      const main=gallery.querySelector('.rfm-main-image');
+                      const count=gallery.querySelector('.rfm-count');
+                      const thumbs=[...gallery.querySelectorAll('.rfm-thumb')];
+                      const images=thumbs.map(t=>t.dataset.rfm);
+                      let i=0;
+                      function show(n){i=(n+images.length)%images.length;main.src=images[i];count.textContent=(i+1)+' / '+images.length;thumbs.forEach((t,k)=>t.classList.toggle('active',k===i));}
+                      thumbs.forEach((t,k)=>t.addEventListener('click',()=>show(k)));
+                      gallery.querySelector('.rfm-prev').addEventListener('click',()=>show(i-1));
+                      gallery.querySelector('.rfm-next').addEventListener('click',()=>show(i+1));
+                    })();
+                  </script>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 02: Supply Chain Inventory Optimization -->
+            <div class="carousel-slide">
+              <div class="carousel-content">
+                <div class="carousel-info">
+                  <div class="carousel-number">
+                    <h3>02</h3>
+                  </div>
+                  <div class="carousel-details">
+                    <h4>Supply Chain Inventory Optimization</h4>
+                    <p class="carousel-category">Operations & Demand Planning</p>
+                    <ul class="carousel-description">
+                      <li>Analyzed inventory and sales data to uncover demand patterns and stock-level trends across fulfillment hubs.</li>
+                      <li>Cleaned and transformed operational data to evaluate inventory performance and demand-related trends.</li>
+                      <li>Developed data-driven inventory insights and optimal reorder levels to reduce the risk of overstocking and stockouts.</li>
+                    </ul>
+                    <div class="carousel-tools">
+                      <span class="tools-label">Tech Stack</span>
+                      <p class="tools-list">Python, Pandas, MS Excel, Seaborn, Inventory Modeling</p>
+                    </div>
+                    <div class="carousel-actions">
+                    <a href="#" class="carousel-action-link open-case-study" data-project="supplychain">
+                      View Case Study
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="https://tauheednafees1-cpu-supply-chain-inventory-optimizati-app-wvkdi9.streamlit.app/" target="_blank" rel="noopener noreferrer" class="carousel-action-link">
+                      Live Demo
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="https://github.com/tauheednafees1-cpu/Supply-Chain-Inventory-Optimization" target="_blank" rel="noopener noreferrer" class="carousel-action-link">
+                      Source Code
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                  </div>
+                  </div>
+                </div>
+               <div class="carousel-image-wrapper supplychain-project-gallery">
+  <style>
+    .supplychain-project-gallery {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .supplychain-project-gallery .supply-main-frame {
+      position: relative;
+      width: 100%;
+      height: 330px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0b111b;
+      border: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .supplychain-project-gallery .supply-main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #080d15;
+    }
+
+    .supplychain-project-gallery .supply-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      background: rgba(5,10,18,.78);
+      color: #fff;
+      cursor: pointer;
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .supplychain-project-gallery .supply-prev {
+      left: 12px;
+    }
+
+    .supplychain-project-gallery .supply-next {
+      right: 12px;
+    }
+
+    .supplychain-project-gallery .supply-count {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: rgba(5,10,18,.82);
+      color: #fff;
+      font-size: 11px;
+      z-index: 3;
+    }
+
+    .supplychain-project-gallery .supply-thumbs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+    }
+
+    .supplychain-project-gallery .supply-thumb {
+      height: 58px;
+      padding: 0;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0b111b;
+      cursor: pointer;
+      opacity: .65;
+    }
+
+    .supplychain-project-gallery .supply-thumb.active {
+      opacity: 1;
+      border-color: var(--accentColor,#54e6d2);
+    }
+
+    .supplychain-project-gallery .supply-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media(max-width:900px) {
+      .supplychain-project-gallery .supply-main-frame {
+        height: 260px;
+      }
+
+      .supplychain-project-gallery .supply-thumb {
+        height: 48px;
+      }
+    }
+  </style>
+
+  <div class="supply-main-frame">
+
+    <button
+      class="supply-nav supply-prev"
+      type="button"
+      aria-label="Previous Supply Chain screenshot">
+      ‹
+    </button>
+
+    <img
+      class="supply-main-image"
+      src="assets/images/supply1.png"
+      alt="Supply Chain Control Center dashboard"
+      loading="eager">
+
+    <button
+      class="supply-nav supply-next"
+      type="button"
+      aria-label="Next Supply Chain screenshot">
+      ›
+    </button>
+
+    <span class="supply-count">1 / 5</span>
+
+  </div>
+
+  <div class="supply-thumbs">
+
+    <button
+      class="supply-thumb active"
+      type="button"
+      data-supply="assets/images/supply1.png">
+      <img
+        src="assets/images/supply1.png"
+        alt="Supply Chain Control Center">
+    </button>
+
+    <button
+      class="supply-thumb"
+      type="button"
+      data-supply="assets/images/supply2.png">
+      <img
+        src="assets/images/supply2.png"
+        alt="Replenishment Planner">
+    </button>
+
+    <button
+      class="supply-thumb"
+      type="button"
+      data-supply="assets/images/supply3.png">
+      <img
+        src="assets/images/supply3.png"
+        alt="Stock Risk Map">
+    </button>
+
+    <button
+      class="supply-thumb"
+      type="button"
+      data-supply="assets/images/supply4.png">
+      <img
+        src="assets/images/supply4.png"
+        alt="Supplier Risk and Reliability">
+    </button>
+
+    <button
+      class="supply-thumb"
+      type="button"
+      data-supply="assets/images/supply5.png">
+      <img
+        src="assets/images/supply5.png"
+        alt="SKU Detail">
+    </button>
+
+  </div>
+
+  <script>
+    (function() {
+
+      const gallery = document.currentScript.closest(
+        '.supplychain-project-gallery'
+      );
+
+      if (!gallery) return;
+
+      const main = gallery.querySelector('.supply-main-image');
+      const count = gallery.querySelector('.supply-count');
+      const thumbs = [
+        ...gallery.querySelectorAll('.supply-thumb')
+      ];
+
+      const images = thumbs.map(
+        thumb => thumb.dataset.supply
+      );
+
+      let current = 0;
+
+      function show(index) {
+
+        current = (index + images.length) % images.length;
+
+        main.src = images[current];
+
+        count.textContent =
+          (current + 1) + ' / ' + images.length;
+
+        thumbs.forEach((thumb, index) => {
+
+          thumb.classList.toggle(
+            'active',
+            index === current
+          );
+
+        });
+
+      }
+
+      thumbs.forEach((thumb, index) => {
+
+        thumb.addEventListener('click', () => {
+          show(index);
+        });
+
+      });
+
+      gallery
+        .querySelector('.supply-prev')
+        .addEventListener('click', () => {
+          show(current - 1);
+        });
+
+      gallery
+        .querySelector('.supply-next')
+        .addEventListener('click', () => {
+          show(current + 1);
+        });
+
+      show(0);
+
+    })();
+  </script>
+
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <!-- =========================================================
+     PROJECT NAVIGATION
+     ========================================================= -->
+<div class="carousel-controls">
+
+  <div class="project-navigation">
+
+    <div class="project-navigation-label">
+      <span class="project-nav-eyebrow">FEATURED PROJECTS</span>
+      <span class="project-nav-current">SELECT A PROJECT</span>
+    </div>
+
+    <div class="project-nav-tabs">
+
+      <button
+        class="project-nav-item active"
+        data-project-index="0"
+        aria-label="View Customer Segmentation RFM Analysis">
+
+        <span class="project-nav-number">01</span>
+
+        <span class="project-nav-text">
+          <strong>RFM Analysis</strong>
+          <small>Customer Segmentation</small>
+        </span>
+
+      </button>
+
+      <button
+        class="project-nav-item"
+        data-project-index="1"
+        aria-label="View Supply Chain Inventory Optimization">
+
+        <span class="project-nav-number">02</span>
+
+        <span class="project-nav-text">
+          <strong>Supply Chain</strong>
+          <small>Inventory Optimization</small>
+        </span>
+
+      </button>
+    </div>
+
+  </div>
+
+  <div class="carousel-arrows">
+
+    <button
+      class="carousel-arrow carousel-arrow-left"
+      aria-label="Previous Project">
+
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+
+      <span>PREV</span>
+
+    </button>
+
+    <button
+      class="carousel-arrow carousel-arrow-right"
+      aria-label="Next Project">
+
+      <span>NEXT</span>
+
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+
+    </button>
+
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       9. WORK EXPERIENCE (TIMELINE MATCHING REFERENCE)
+       ========================================================= -->
+  <section class="career-section" id="experience">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">CAREER PATH</span>
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <p class="section-subtitle">Hands-on internship experience across data analytics, data science, and business data projects.</p>
+      </div>
+
+      <div class="career-info">
+        <div class="career-timeline">
+          <div class="career-dot"></div>
+        </div>
+
+        <!-- Codec Technologies Internship -->
+        <div class="career-info-box">
+          <div class="career-info-in">
+            <div class="career-role">
+              <h4>Data Analytics Intern</h4>
+              <h5>Codec Technologies Pvt. Ltd.</h5>
+              <div class="career-date">Aug 2026 – Sep 2026</div>
+              <span class="career-badge-tag">AICTE & ICAC APPROVED</span>
+            </div>
+          </div>
+          <div class="career-info-right">
+            <p class="career-desc">
+             Completed a one-month AICTE & ICAC-approved Data Analytics internship at Codec Technologies, gaining practical exposure to data analytics, preprocessing, and visual reporting.
+            </p>
+            <ul class="career-bullets">
+              <li>Gained practical exposure to data analytics concepts and developed skills directly applicable to enterprise analytics.</li>
+              <li>Worked extensively with Python data analysis libraries including Seaborn and Matplotlib as part of the internship experience.</li>
+              <li>Applied data cleaning, exploratory analysis, and visualization techniques to structured datasets during the internship.</li>
+            </ul>
+          </div>
+        </div>
+                <!-- CODTECH IT Solutions Internship -->
+        <div class="career-info-box">
+          <div class="career-info-in">
+            <div class="career-role">
+              <h4>Data Science Intern</h4>
+              <h5>CODTECH IT Solutions Private Limited</h5>
+              <div class="career-date">Jul 2026 – Aug 2026</div>
+              <span class="career-badge-tag">4-WEEK INTERNSHIP</span>
+            </div>
+          </div>
+
+          <div class="career-info-right">
+            <p class="career-desc">
+              Successfully completed a four-week Data Science internship program with practical exposure to data science concepts and technical problem-solving.
+            </p>
+
+            <ul class="career-bullets">
+              <li>Completed a structured four-week internship program in the Data Science domain.</li>
+              <li>Gained practical exposure to data science concepts and analytical workflows.</li>
+              <li>Strengthened technical problem-solving and hands-on data science skills through internship activities.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       10. CERTIFICATIONS & ACCREDITATIONS (MATCHING REFERENCE BADGES)
+       ========================================================= -->
+  <section class="career-section" id="certifications" style="padding-top: 40px;">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">CREDENTIALS</span>
+        <h2 class="section-title">Credentials</h2>
+        <p class="section-subtitle">Accredited certifications validating proficiency across data analysis, Python, and cloud analytics fundamentals.</p>
+      </div>
+
+      <div class="certs-grid">
+        
+        <!-- Cert 1: Databricks Fundamentals -->
+        <div class="cert-card">
+          <div class="cert-badge-preview">
+          <div class="cert-badge-preview">
+    <iframe
+        src="assets/images/certificates/databricks_certificate.pdf"
+        title="Databricks Fundamentals Accreditation"
+        loading="lazy"
+        style="width:100%; height:320px; border:none; border-radius:12px;">
+    </iframe>
+</div>
+
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Databricks Academy</div> 
+            <h4 class="cert-title">Databricks Fundamentals Accreditation</h4>
+            <p class="cert-desc">Databricks fundamentals accreditation covering core concepts of the Databricks data and analytics platform.</p>
+            <div class="cert-footer">
+              <span class="cert-status">Verified Credential</span>
+              <a href="assets/images/certificates/databricks_certificate.pdf"
+                target="_blank"
+                    rel="noopener"
+                  class="cert-btn">
+                    View Certificate
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 2: Introduction to Data Analytics -->
+       <div class="cert-card">
+  <div class="cert-badge-preview">
+    <img
+      src="assets/images/certificates/simplilearn_data_analytics.png"
+      alt="Introduction to Data Analytics Certificate">
+  </div>
+
+  <div class="cert-body">
+    <div class="cert-issuer">Simplilearn SkillUp</div>
+
+    <h4 class="cert-title">Introduction to Data Analytics</h4>
+
+    <p class="cert-desc">
+      Comprehensive foundation in exploratory analytics, statistical methods,
+      hypothesis testing, and business decision support.
+    </p>
+
+    <div class="cert-footer">
+      <span class="cert-status">Verified Credential</span>
+
+      <a
+        href="assets/images/certificates/simplilearn_data_analytics.png"
+        target="_blank"
+        rel="noopener"
+        class="cert-btn">
+        View Certificate
+      </a>
+    </div>
+  </div>
+</div>
+        <!-- Cert 3: Data Analytics Training Program -->
+        <div class="cert-card">
+          <div class="cert-badge-preview">
+           <iframe
+              src="assets/images/certificates/Course Tauheed Nafees.pdf"
+              title="Databricks Fundamentals Accreditation"
+              loading="lazy"
+              style="width:100%; height:320px; border:none; border-radius:12px;">
+          </iframe>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Codec Technologies</div>
+            <h4 class="cert-title">Data Analytics Training Program</h4>
+            <p class="cert-desc">AICTE & ICAC Approved program covering end-to-end Python data pipeline construction, statistical visualization, and EDA.</p>
+            <div class="cert-footer">
+              <span class="cert-status">AICTE & ICAC Approved</span>
+              <a href="assets/images/certificates/Course Tauheed Nafees.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  class="cert-btn">
+                    View Certificate
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 4: Python Programming -->
+       <div class="cert-card">
+  <div class="cert-badge-preview">
+    <img
+      src="assets/images/certificates/python_certificate_adv.png"
+      alt="Introduction to Data Analytics Certificate">
+  </div>
+
+  <div class="cert-body">
+    <div class="cert-issuer">Reliance Foundation Skilling Academy / Skill India Digital</div>
+
+    <h4 class="cert-title">Python Programming</h4>
+
+    <p class="cert-desc">
+      Python programming fundamentals covering core syntax, programming concepts, and practical problem-solving.
+    </p>
+
+    <div class="cert-footer">
+      <span class="cert-status">Verified Credential</span>
+
+      <a
+        href="assets/images/certificates/python_certificate_adv.png"
+        target="_blank"
+        rel="noopener"
+        class="cert-btn">
+        View Certificate
+      </a>
+    </div>
+  </div>
+</div>
+
+        <!-- Cert 5: Job Ready Data Science Course -->
+        <div class="cert-card">
+          <div class="cert-badge-preview">
+             <iframe
+              src="assets/images/certificates/The_Ultimate_Job_Ready_Data_Science_Course_Certificate.pdf"
+              title="The Ultimate Job Ready Data Science Course"
+              loading="lazy"
+              style="width:100%; height:320px; border:none; border-radius:12px;">
+          </iframe>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">CodeWithHarry</div>
+            <h4 class="cert-title">The Ultimate Job Ready Data Science Course</h4>
+            <p class="cert-desc">Comprehensive bootcamp covering end-to-end Python analytics, machine learning pipelines, regression, and statistical evaluation.</p>
+            <div class="cert-footer">
+              <span class="cert-status">Completed Course</span>
+             <a href="assets/images/certificates/The_Ultimate_Job_Ready_Data_Science_Course_Certificate.pdf"
+                target="_blank"
+                rel="noopener"
+                class="cert-btn">
+                  View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       11. EDUCATION JOURNEY
+       ========================================================= -->
+  <section class="education-section" id="education">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">ACADEMIC BACKGROUND</span>
+        <h2 class="section-title">Education <span>Journey</span></h2>
+        <p class="section-subtitle">Rigorous foundational coursework in Computer Science, Artificial Intelligence, and physical sciences.</p>
+      </div>
+
+      <div class="edu-grid">
+        
+        <!-- B.Tech -->
+        <div class="edu-card">
+          <span class="edu-year">PURSUING (CURRENT)</span>
+          <h4 class="edu-degree">B.Tech — Computer Science (AI & ML)</h4>
+          <div class="edu-school">Allenhouse Institute of Technology</div>
+          <p class="edu-detail">
+            Comprehensive curriculum spanning Artificial Intelligence, Machine Learning algorithms, Database Management Systems (DBMS), Data Structures, and Python programming.
+          </p>
+        </div>
+
+        <!-- Class XII -->
+        <div class="edu-card">
+          <span class="edu-year">COMPLETED 2022</span>
+          <h4 class="edu-degree">Class XII (PCM — Physics, Chemistry, Math)</h4>
+          <div class="edu-school">UP Board — St. Francis Inter College</div>
+          <p class="edu-detail">
+            Strong mathematical and analytical foundation focusing on calculus, algebra, probability, and physics.
+          </p>
+        </div>
+
+        <!-- Class X -->
+        <div class="edu-card">
+          <span class="edu-year">COMPLETED 2020</span>
+          <h4 class="edu-degree">Class X (General Science & Mathematics)</h4>
+          <div class="edu-school">UP Board — St. Francis Inter College</div>
+         <p class="edu-detail">
+          Completed secondary education with a foundation in mathematics and science.
+        </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       12. CONTACT SECTION (MATCHING REFERENCE)
+       ========================================================= -->
+  <!-- =========================================================
+     12. CONTACT / LET'S CONNECT
+     ========================================================= -->
+<section class="contact-section" id="contact">
+  <div class="section-container">
+
+    <div class="section-header contact-header">
+      <span class="section-tag">GET IN TOUCH</span>
+
+      <h2 class="section-title">
+        Let's <span>Connect</span>
+      </h2>
+
+      <p class="section-subtitle">
+        Currently seeking an entry-level Data Analyst role and open to
+        full-time opportunities, internships, and data projects.
+      </p>
+    </div>
+
+
+    <!-- Availability Banner -->
+    <div class="connect-availability">
+
+      <div class="availability-left">
+        <span class="availability-dot"></span>
+
+        <div>
+          <strong>OPEN TO OPPORTUNITIES</strong>
+          <span>Available for Data Analyst roles, internships & projects</span>
+        </div>
+      </div>
+
+      <div class="availability-tag">
+        DATA ANALYST
+      </div>
+
+    </div>
+
+
+  <!-- Contact Cards -->
+<div class="connect-grid">
+
+  <!-- Email -->
+  <a
+    href="mailto:tauheednafees1@gmail.com"
+    class="connect-card"
+    title="Open Email">
+
+    <div class="connect-icon">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 7-10 6L2 7"/>
+
+      </svg>
+    </div>
+
+    <div class="connect-info">
+      <span class="connect-label">EMAIL</span>
+      <strong>tauheednafees1@gmail.com</strong>
+      <small>Open your email client</small>
+    </div>
+
+    <svg
+      class="connect-arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      <polyline points="9 18 15 12 9 6"/>
+
+    </svg>
+
+  </a>
+
+
+  <!-- Phone -->
+<!-- Phone / WhatsApp -->
+<a href="https://wa.me/917985262099"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="connect-card"
+   title="Chat on WhatsApp">
+
+    <div class="connect-icon">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             width="22"
+             height="22"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-label="WhatsApp">
+
+            <path d="M20.4 3.6A11.5 11.5 0 0 0 2.9 17.5L2 22l4.6-1.2A11.5 11.5 0 1 0 20.4 3.6Z"/>
+
+            <path d="M8.1 7.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.9 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.1 1.7.1.5-.1 1.6-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5z"/>
+
+        </svg>
+
+    </div>
+
+    <div class="connect-info">
+        <span class="connect-label">WHATSAPP</span>
+        <strong>+91 7985262099</strong>
+        <small>Click to chat with me on WhatsApp</small>
+    </div>
+
+    <svg class="connect-arrow"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round">
+
+        <polyline points="9 18 15 12 9 6"/>
+
+    </svg>
+
+</a>
+
+
+  <!-- LinkedIn -->
+  <a
+    href="https://www.linkedin.com/in/tauheed-nafees-ab6b222a9/"
+    target="_blank"
+    rel="noopener"
+    class="connect-card"
+    title="Open LinkedIn">
+
+    <div class="connect-icon">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <rect x="3" y="3" width="18" height="18" rx="4"/>
+        <path d="M8 10.5V16"/>
+        <circle cx="8" cy="7.5" r="1"/>
+        <path d="M12 16V10.5"/>
+        <path d="M12 13.1C12 11.65 12.95 10.5 14.35 10.5C15.95 10.5 17 11.7 17 13.2V16"/>
+
+      </svg>
+    </div>
+
+    <div class="connect-info">
+      <span class="connect-label">LINKEDIN</span>
+      <strong>Professional Profile</strong>
+      <small>Connect with me</small>
+    </div>
+
+    <svg
+      class="connect-arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      <polyline points="9 18 15 12 9 6"/>
+
+    </svg>
+
+  </a>
+
+</div>
+
+
+    <!-- Social / CTA Area -->
+    <div class="connect-bottom">
+
+      <div class="connect-socials">
+
+        <a
+          href="https://www.linkedin.com/in/tauheed-nafees-ab6b222a9/"
+          target="_blank"
+          rel="noopener"
+          class="connect-social-card">
+
+          <div class="connect-social-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <path d="M8 10.5V16"/>
+              <circle cx="8" cy="7.5" r="1"/>
+              <path d="M12 16V10.5"/>
+              <path d="M12 13.1C12 11.65 12.95 10.5 14.35 10.5C15.95 10.5 17 11.7 17 13.2V16"/>
+
+            </svg>
+          </div>
+
+          <span>LinkedIn</span>
+
+          <svg
+            class="social-arrow"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <polyline points="9 18 15 12 9 6"/>
+
+          </svg>
+
+        </a>
+
+
+        <a
+          href="https://github.com/tauheednafees1-cpu"
+          target="_blank"
+          rel="noopener"
+          class="connect-social-card">
+
+          <div class="connect-social-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+
+              <path d="M9 19c-5 1.5-5-2.5-7-3"/>
+              <path d="M15 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+
+            </svg>
+          </div>
+
+          <span>GitHub</span>
+
+          <svg
+            class="social-arrow"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <polyline points="9 18 15 12 9 6"/>
+
+          </svg>
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- =========================================================
+       13. FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© 2026 <strong>Tauheed Nafees</strong> — <span>Data Analyst</span>. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <button class="back-to-top">↑ Back to Top</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       14. INTERACTIVE CASE STUDY MODAL
+       ========================================================= -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div id="modal-details-content">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       15. RESUME MODAL & PRINT VIEW
+       ========================================================= -->
+  <!-- =========================================================
+     15. RESUME MODAL & PRINT VIEW
+     ========================================================= -->
+<div class="modal-overlay" id="resume-modal">
+  <div class="modal-box" style="max-width: 850px;">
+    
+    <button class="modal-close-btn close-resume-modal" aria-label="Close Modal">
+      &times;
+    </button>
+
+    <!-- Resume Header -->
+    <div style="
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      gap: 20px;
+    ">
+      <div>
+        <h2 style="
+          font-size: 26px;
+          color: #fff;
+          margin-bottom: 4px;
+        ">
+          TAUHEED NAFEES
+        </h2>
+
+        <p style="
+          font-size: 14px;
+          color: var(--accentColor);
+          font-family: var(--font-mono);
+        ">
+          Data Analyst | Computer Science (AI & ML)
+        </p>
+      </div>
+
+      <button
+        onclick="window.print()"
+        class="btn-primary"
+        style="
+          padding: 10px 22px;
+          font-size: 13px;
+          white-space: nowrap;
+        "
+      >
+        Print / Save PDF
+      </button>
+    </div>
+
+    <!-- Resume Content -->
+    <div style="
+      font-size: 14px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    ">
+
+      <!-- Contact Information -->
+      <div>
+        <h3 style="
+          color: var(--accentColor);
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 6px;
+          font-family: var(--font-mono);
+        ">
+          Contact Information
+        </h3>
+
+        <p>
+          Email:
+          <a
+            href="mailto:tauheednafees1@gmail.com"
+            style="color: #fff;"
+          >
+            tauheednafees1@gmail.com
+          </a>
+          |
+          Phone: +91 7985262099
+          |
+          Location: Kanpur, Uttar Pradesh, India
+        </p>
+
+        <p style="margin-top: 4px;">
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/tauheed-nafees-ab6b222a9/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--accentColor);"
+          >
+            linkedin.com/in/tauheed-nafees-ab6b222a9
+          </a>
+          |
+          GitHub:
+          <a
+            href="https://github.com/tauheednafees1-cpu"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--accentColor);"
+          >
+            github.com/tauheednafees1-cpu
+          </a>
+        </p>
+      </div>
+
+      <!-- Profile Summary -->
+      <div>
+        <h3 style="
+          color: var(--accentColor);
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 6px;
+          font-family: var(--font-mono);
+        ">
+          Professional Summary
+        </h3>
+
+        <p>
+          B.Tech Computer Science (AI & ML) student with practical experience
+          in Python, SQL, Excel, Pandas, and data analysis. Experienced in data
+          cleaning, exploratory analysis, visualization, customer segmentation,
+          and deriving insights from business data. Built projects involving
+          RFM-based customer segmentation and supply chain inventory
+          optimization.
+        </p>
+      </div>
+
+      <!-- Work Experience -->
+      <div>
+        <h3 style="
+          color: var(--accentColor);
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 6px;
+          font-family: var(--font-mono);
+        ">
+          Work Experience
+        </h3>
+
+        <!-- CODTECH Internship -->
+        <p style="
+          font-weight: 600;
+          color: #fff;
+        ">
+          Data Science Intern |
+          CODTECH IT SOLUTIONS PRIVATE LIMITED
+          (Jul 2026 – Aug 2026)
+        </p>
+
+        <p style="
+          color: #94a3b8;
+          font-size: 13px;
+        ">
+          Four-week Data Science internship program completed from
+          04 July 2026 to 01 August 2026.
+        </p>
+
+        <ul style="
+          padding-left: 20px;
+          color: #cbd5e1;
+          margin-top: 6px;
+        ">
+          <li>
+            Successfully completed a four-week internship in the Data Science domain.
+          </li>
+          <li>
+            Gained practical exposure to data science concepts,
+            analytical workflows, and technical problem-solving.
+          </li>
+        </ul>
+
+        <!-- Codec Internship -->
+        <p style="
+          font-weight: 600;
+          color: #fff;
+          margin-top: 14px;
+        ">
+          Data Analytics Intern |
+          Codec Technologies Pvt. Ltd.
+          (Aug 2026 – Sep 2026)
+        </p>
+
+        <p style="
+          color: #94a3b8;
+          font-size: 13px;
+        ">
+          One-month AICTE & ICAC-approved internship conducted from
+          20 August 2026 to 19 September 2026.
+        </p>
+
+        <ul style="
+          padding-left: 20px;
+          color: #cbd5e1;
+          margin-top: 6px;
+        ">
+          <li>
+            Completed a structured one-month internship program in Data Analytics.
+          </li>
+          <li>
+            Gained practical exposure to data analytics concepts,
+            visualization, and analytical workflows.
+          </li>
+          <li>
+            Strengthened hands-on skills relevant to data analysis and
+            business data interpretation.
+          </li>
+        </ul>
+      </div>
+
+
+<!-- Key Projects -->
+<div>
+  <h3 style="
+    color: var(--accentColor);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-family: var(--font-mono);
+  ">
+    Key Projects
+  </h3>
+
+  <!-- Project 1 -->
+  <p style="
+    font-weight: 600;
+    color: #fff;
+  ">
+    1. Customer Segmentation — RFM Analysis
+  </p>
+
+  <p style="
+    color: #94a3b8;
+    font-size: 13px;
+  ">
+    Python, Pandas, NumPy, Streamlit, Plotly
+  </p>
+
+  <ul style="
+    padding-left: 20px;
+    color: #cbd5e1;
+    margin-top: 6px;
+  ">
+    <li>
+      Performed RFM analysis to segment customers using
+      recency, frequency, and monetary value.
+    </li>
+    <li>
+      Cleaned and transformed transaction data, calculated
+      RFM scores, and assigned customer segments.
+    </li>
+    <li>
+      Analyzed segment-level purchasing behavior to identify
+      high-value, loyal, and at-risk customer groups.
+    </li>
+    <li>
+      Built an interactive Streamlit dashboard for customer
+      analysis and business decision support.
+    </li>
+  </ul>
+
+  <!-- Project 2 -->
+  <p style="
+    font-weight: 600;
+    color: #fff;
+    margin-top: 14px;
+  ">
+    2. Supply Chain Inventory Optimization
+  </p>
+
+  <p style="
+    color: #94a3b8;
+    font-size: 13px;
+  ">
+    Python, Pandas, Excel, Data Analysis
+  </p>
+
+  <ul style="
+    padding-left: 20px;
+    color: #cbd5e1;
+    margin-top: 6px;
+  ">
+    <li>
+      Analyzed inventory and sales data to identify demand
+      patterns, stock levels, and replenishment needs.
+    </li>
+    <li>
+      Cleaned and transformed operational data to evaluate
+      inventory performance and demand-related trends.
+    </li>
+    <li>
+      Developed data-driven inventory insights to support
+      efficient stock planning and reduce overstock or
+      stockout risk.
+    </li>
+  </ul>
+</div>
+
+      <!-- Technical Skills -->
+<div>
+  <h3 style="
+    color: var(--accentColor);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-family: var(--font-mono);
+  ">
+    Technical Skills
+  </h3>
+
+  <p>
+    <strong>Programming:</strong>
+    Python, SQL
+  </p>
+
+  <p>
+    <strong>Data Analysis:</strong>
+    Pandas, NumPy, Excel, Data Cleaning, EDA, KPI Analysis
+  </p>
+
+  <p>
+    <strong>Data Visualization:</strong>
+    Power BI, Tableau, Matplotlib, Seaborn
+  </p>
+
+  <p>
+    <strong>Database:</strong>
+    MySQL
+  </p>
+
+  <p>
+    <strong>Tools:</strong>
+    Git, GitHub, Jupyter Notebook, JupyterLab
+  </p>
+</div>
+
+<!-- Soft Skills -->
+<div style="margin-top: 18px;">
+  <h3 style="
+    color: var(--accentColor);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-family: var(--font-mono);
+  ">
+    Soft Skills
+  </h3>
+
+  <p>
+    <strong>Professional Strengths:</strong>
+    Problem Solving, Critical Thinking, Communication Skills,
+    Team Collaboration, Adaptability, Presentation Skills,
+    Optimistic Mindset
+  </p>
+</div>
+      <!-- Certifications -->
+      <div>
+        <h3 style="
+          color: var(--accentColor);
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 6px;
+          font-family: var(--font-mono);
+        ">
+          Certifications & Training
+        </h3>
+
+        <ul style="
+          padding-left: 20px;
+          color: #cbd5e1;
+        ">
+          <li>
+            Introduction to Data Analytics — Simplilearn SkillUp
+          </li>
+          <li>
+            Data Analytics Training Program — Codec Technologies
+          </li>
+          <li>
+            Python Programming — Reliance Foundation Skilling Academy / Skill India Digital
+          </li>
+          <li>
+            Databricks Fundamentals Accreditation — Databricks Academy
+          </li>
+          <li>
+            The Ultimate Job Ready Data Science Course — CodeWithHarry
+          </li>
+        </ul>
+      </div>
+
+      <!-- Education -->
+      <div>
+        <h3 style="
+          color: var(--accentColor);
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 6px;
+          font-family: var(--font-mono);
+        ">
+          Education
+        </h3>
+
+        <p>
+          <strong>
+            B.Tech — Computer Science (AI & ML)
+          </strong>
+          <br>
+          Allenhouse Institute of Technology
+          <br>
+          <span style="color: #94a3b8;">
+            Pursuing
+          </span>
+        </p>
+
+        <p style="margin-top: 8px;">
+          <strong>
+            Class XII (PCM) — 2022
+          </strong>
+          <br>
+          UP Board — St. Francis Inter College
+        </p>
+
+        <p style="margin-top: 8px;">
+          <strong>
+            Class X (General Science & Mathematics) — 2020
+          </strong>
+          <br>
+          UP Board — St. Francis Inter College
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <!-- =========================================================
+       16. TOAST NOTIFICATION ALERT
+       ========================================================= -->
+  <div class="toast-notice" id="toast-notice">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--accentColor);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Hero image reliability fallback: keeps the rest of the website unchanged. -->
+  <script>
+    (function () {
+      const profile = document.querySelector('.hero-profile-image');
+      if (profile) {
+        const candidates = [
+          'assets/images/profile.jpg',
+          'assets/images/profile.jpeg',
+          'assets/images/profile.png',
+          'assets/images/profile.webp',
+          './assets/images/profile.jpg',
+          './assets/images/profile.jpeg',
+          './assets/images/profile.png',
+          './assets/images/profile.webp'
+        ];
+        let index = 0;
+        profile.addEventListener('error', function () {
+          if (index < candidates.length - 1) {
+            index++;
+            profile.src = candidates[index];
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
