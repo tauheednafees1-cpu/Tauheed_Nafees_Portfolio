@@ -1,7 +1,7 @@
 # Tauheed Nafees | Portfolio
 
 B.Tech Computer Science (AI & ML) student aspiring to become a Data Analyst. This portfolio showcases my projects, technical skills, certifications, and professional profile.
-
+portfolio link - https://tauheednafees1-cpu.github.io/Tauheed_Nafees_Portfolio/
 ## 📊 Featured Projects
 
 ### 1. Customer Segmentation — RFM Analysis
